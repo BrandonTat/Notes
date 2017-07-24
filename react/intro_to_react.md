@@ -34,5 +34,37 @@ re-rendering, since we can re-render a page in milliseconds.
 
 
 ### React Components
-
 These are the key building components of React projects. They are JavaScript functions that return HTML. When building React components, use the Single Responsibility Principle to decide what should be separate components.
+
+## Anatomy of React Components: Prop, State, & JSX
+* Inherit from React.Component
+  * Need to add React module to package.JSON
+* Every component needs a constructor and render method.
+* Components can receive data two ways:
+
+  1. Props
+    * Attributes inherited from parent component.
+    * These attributes should not be mutated.
+  2. State
+    * Mutable data owned by the component.
+    * Generally updated through user input.
+    * The initial value of this data is set in the constructor.
+
+## Anatomy of React Components: Render
+* Describes what a component should look like at any moment in time.
+* Return only one HTML element.
+* Function knows props and state and returns HTML.
+* Render function is never explicitly called.
+  * Called when there are changes to data within props or state.
+  * ``` this.setState({ count: this.state.count + 1}) ```
+* Uses JSX, similar to erb. Allows us to embed JS code within HTML.
+
+## Anatomy of React Components: Events
+* Handler set by passing prop: onClick.
+* Value is pointer to handler function.
+* Event handler function is passed event object, just like jQuery event.
+
+## Rendering components in browser
+* Need to wait until DOM has fully loaded so we have a target to render into.
+* ReactDOM.render will replace entire content of target HTML element.
+``` ReactDOM.render(< {React Component} />, {where to render}) ```
