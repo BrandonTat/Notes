@@ -1,6 +1,6 @@
 ### React Functional Components
 
-* Components that do not need to keep track of internal states.
+* Components that do not need to keep track of internal states, does not need any React lifecycle methods, and is a function entirely of its props.
 
 ```JavaScript
 import React from 'react';
