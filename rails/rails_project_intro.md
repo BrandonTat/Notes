@@ -9,10 +9,11 @@
   * generates the model and the migration
 4. run migration
   * ```rails db:migrate```
-5. create controllers
+5. add routes
+  * ```resources: #{controllers}```
+  * ```resources: #{controller}, only: [:index, :show, :create, :update, :destroy]```
+  * add in **routes.rb** file
+  * creates all methods for controller  
+6. create controllers
   * ```rails generate controller #{controller_names}```
   * controller name convention is plural
-6. add routes
-  * ```resources: #{controllers}```
-  * add in **routes.rb** file
-  * creates all methods for controller
