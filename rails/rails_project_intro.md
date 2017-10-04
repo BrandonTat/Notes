@@ -10,10 +10,12 @@
 4. run migration
   * ```rails db:migrate```
 5. add routes
+  * ```root to: 'static_pages#root'```
   * ```resources: #{controllers}```
   * ```resources: #{controller}, only: [:index, :show, :create, :update, :destroy]```
   * add in **routes.rb** file
   * creates all methods for controller  
 6. create controllers
   * ```rails generate controller #{controller_names}```
+  * ```rails generate controller staticPages```
   * controller name convention is plural
